@@ -1,0 +1,63 @@
+
+.table_responsive{
+    font-size: 17px;
+    text-align: center;
+}
+
+.campo{
+    width: 100px;
+    color: white;
+    background: #373737; 
+}
+
+.campo_correo{
+    width: 10px;
+    color: white;
+    background: #373737;  
+}
+.campo_drive{
+    width: 200px;
+    color: white;
+    background: #373737;
+}
+
+.campo_acciones{
+    width: 120px;
+    color: white;
+    background: #373737;
+}
+
+.boton_editar{
+    margin: 10px;
+    font-size: 20px;
+    color: #D85805;
+}
+.boton_editar:hover {
+     color: #D85805 ;
+}
+
+
+.boton_remover{
+     margin: 10px;
+     font-size: 20px;
+     color: #B01717;
+}
+.boton_remover:hover {
+  color: #BD0401 ;
+}
+
+.linea_acciones{
+    background: black;
+    height: 0.1px;
+    background-color: rgba(5, 0, 0, 0.3);
+}
+
+.boton_habilitar{
+    margin: 10px;
+    color: #006810;
+}
+
+.boton_subir{
+    margin: 10px;
+    color: #006810;
+}

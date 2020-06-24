@@ -1,0 +1,18 @@
+
+.body{
+    background-color: #fff;
+}
+
+
+
+.label-input100{
+    margin: 5px;
+}
+
+.btn-primary{
+  border-radius: 60px;
+  width: 400px;
+  height: 47px;
+  font-family: "arial";
+  font-size: 18px;
+}

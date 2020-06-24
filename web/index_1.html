@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	  
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="Bootstrap_4/css/bootstrap.min.css">	
+	<!-- Alertify CSS -->
+    <link rel="stylesheet" href="plugins/alertifyjs/css/alertify.min.css">  
+	<!-- Alertify theme default -->  
+	<link rel="stylesheet" href="plugins/alertifyjs/css/themes/default.min.css"/>  
+    <title>Ejemplos</title>
+  </head>
+  <body>      	
+	<div class="container">
+		<div class="jumbotron">
+			<h2 class="text-center">Framework: Bootstrap 4</h2>
+			<h3 class="display-3 text-center">Notificaciones y alertas</h3>
+		</div>
+		<div class="row">
+			<div class="col-lg-12">
+				<button id="btn_simple">Alert</button>
+			</div>	
+		   </div>
+		<div class="row">		   
+			<div class="col-lg-6">
+				<h5>Alertify</h5>
+				<br>
+				<button id="btnAL_1" type="button" class="btn btn-primary">Notificador</button>
+				<button id="btnAL_2" type="button" class="btn btn-secundary">Alert</button>
+				<button id="btnAL_3" type="button" class="btn btn-success">Prompt </button>	
+				<button id="btnAL_4" type="button" class="btn btn-danger">Confirm </button>
+			</div>				
+			<div class="col-lg-6">	
+				<h5>Sweet Alert</h5>
+				<br>
+				<button id="btnSA_1" type="button" class="btn btn-outline-success">Básico</button>
+				<button id="btnSA_2" type="button" class="btn btn-outline-info">Alertas</button>
+				<button id="btnSA_3" type="button" class="btn btn-outline-warning">Confirmación</button>
+				<button id="btnSA_4" type="button" class="btn btn-outline-dark">Content</button>
+			</div>		
+		</div>		
+	</div>  
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="JQuery/jquery-3.3.1.min.js"></script>	 
+	<!-- Popper.js-->  
+    <script src="Popper/popper.min.js"></script>	 	 
+	<!-- Bootstrap JS -->  
+    <script src="Bootstrap_4/js/bootstrap.min.js"></script>
+	  
+	<!-- Plugin Sweet alert -->  
+    <script src="plugins/sweetalert/sweetalert.min.js"></script>  		  
+	<!-- Plugins Alertify -->  
+    <script src="plugins/alertifyjs/js/alertify.min.js"></script> 	  
+	  
+	<script>		
+		//simple alert JS		
+		$("#btn_simple").click(function (){
+        	alert("Alerta javascript");	
+    	});
+		
+		//Alertify .notify
+		$("#btnAL_1").click(function (){        	 			 
+			 alertify.notify('Mensaje', 'success', 5, function(){});
+    	});
+		//Alertify .alert
+		$("#btnAL_2").click(function (){        				 			 
+			alertify.alert('Alert Título', 'Alert Mensaje!', function(){alertify.success('Ok');});
+    	});
+		//Alertify .prompt
+		$("#btnAL_3").click(function (){        				
+			alertify.prompt( 'Prompt Título', 'Prompt Mensaje', 'Ingrese un Valor'
+				   , function(evt, value) { alertify.success('Ingresaste: ' + value) }
+				   , function() { alertify.error('Cancel') });
+			 
+    	});
+		//Alertify .confirm
+		$("#btnAL_4").click(function (){			
+			alertify.confirm('Mensaje de confirmación', function(){ alertify.success('Ok') }, function(){ alertify.error('Cancel')});
+		});
+		
+		
+		//Sweet Alert		
+		$("#btnSA_1").click(function (){
+        	swal("Título", "información confidencial");	
+    	});
+		
+		$("#btnSA_2").click(function (){			        				
+			swal("Advertencia", "...texto de advertencia", "warning");
+    	});
+				
+		$("#btnSA_3").click(function (){
+			swal({
+			  title: "¿Está seguro?",
+			  text: "Una vez eliminado, no podrá recuperar este archivo!",
+			  icon: "warning",
+			  buttons: true,
+			  dangerMode: true,
+			})
+			.then((willDelete) => {
+			  if (willDelete) {
+				swal("El archivo ha sido eliminado!", {
+				  icon: "success",
+				});
+			  } else {
+				swal("Operación cancelada!");
+			  }
+			});	
+		});
+		
+		$("#btnSA_4").click(function (){
+			swal("Ingrese un texto:", {
+			  content: "input",
+			})
+			.then((value) => {
+			  swal(`Ud. escribió: ${value}`);
+			});	
+		});
+		
+		
+	</script>  
+  </body>
+</html>

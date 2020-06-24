@@ -1,0 +1,16 @@
+
+
+.formulario{
+    margin: 100px 0px 0px 0px;
+    width: 700px;
+    text-align: left;
+   border: red 5px double;
+}
+
+h1{
+    text-align: center;
+}
+
+label{
+    margin: 5px 0px 0px 50px;
+}

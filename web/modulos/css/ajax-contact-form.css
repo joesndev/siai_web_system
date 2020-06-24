@@ -1,0 +1,425 @@
+/****************
+    - Reset -
+****************/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+    margin:0; 
+	padding:0; 
+	border:0; 
+	outline:0;
+	font-size:100%;
+	color:#444;
+	vertical-align:baseline; 
+	background:transparent;
+}
+
+* {
+	-webkit-box-sizing:border-box;
+	   -moz-box-sizing:border-box;
+			box-sizing:border-box;
+}
+
+*:focus {
+	outline:0;
+}
+
+/*****************
+    - Basics -
+*****************/
+html {
+	overflow-x:hidden;
+	padding:0 !important;
+	margin:0 !important;
+}
+
+ol, ul {  
+	list-style:none; 
+}
+
+a {	
+	text-decoration:none;
+}
+
+body {
+	font:normal 100% Arial,Tahoma,Sans-Serif;
+	color:#444;
+	background:#ddd;
+}
+
+
+/***********************
+    - Form Wrapper -
+***********************/
+.ajax-contact-form {
+	clear:both;
+	position:relative;
+	max-width:720px;
+	margin:50px auto;
+	padding:0 10px;
+}
+
+.ajax-contact-form > .container {
+	background-color:#fff;
+	border:1px solid #bbb;
+	-webkit-border-radius:6px; 
+	   -moz-border-radius:6px; 
+			border-radius:6px;
+}
+
+/****************
+    - Title -
+****************/
+.ajax-contact-form .title {
+	clear:both;
+	padding:20px;
+	font-size:24px;
+	font-weight:bold;
+	text-align:center;
+	background-color:#f6f6f6;
+	border-bottom:1px solid #ddd;	
+	-webkit-border-radius:6px 6px 0 0;
+	   -moz-border-radius:6px 6px 0 0;
+			border-radius:6px 6px 0 0;
+}
+
+.ajax-contact-form .title > span {
+	clear:both;
+	display:block;
+	margin-top:5px;
+	font-size:14px;
+	font-weight:normal;
+	color:#999 !important;
+}
+
+/***************
+    - Form -
+***************/
+.form-holder {
+        
+	clear:both;
+	padding:30px;
+}
+
+form .required {
+	color:#cd0000;
+}
+
+form .field {
+	margin-top:10px; 
+	margin-bottom:15px;
+        
+}
+
+form .field:first-child {
+	margin-top:0;
+        
+}
+
+form .field:after {
+	content:"\0020"; 
+	display:block; 
+	height:0; 
+	clear:both; 
+	overflow:hidden; 
+	visibility:hidden;
+}
+
+form label {
+	display:block; 
+	float:left; 
+	width:140px; 
+	margin-right:20px;	
+	font-size:14px; 
+	line-height:32px;
+}
+
+form .inputs {
+	float:left; 
+	width:calc(100% - 160px);
+        
+}
+
+input.aweform, select.aweform, textarea.aweform {
+	font-family:Arial,Tahoma,Sans-Serif; 
+	font-size:13px; 
+	line-height:18px;
+}
+
+input.aweform[type=text], textarea.aweform, select.aweform {
+	position:relative;
+	background:#fff;
+	width:300px;
+	-webkit-border-radius:3px;
+	   -moz-border-radius:3px;
+			border-radius:3px;
+                        
+                text-align: center;
+	border:1px solid #ccc;
+	color:#7e7e7e;
+	height:32px;
+	margin:0;
+	outline:0;
+	padding:5px 10px;
+	-webkit-transition:background-position 0s, border .3s, color .3s;
+	   -moz-transition:background-position 0s, border .3s, color .3s;
+			transition:background-position 0s, border .3s, color .3s;
+}
+
+input.aweform[type=text]:focus, textarea.aweform:focus, select.aweform:focus {
+	border-color:#999;
+	color:#333;
+}
+
+input.small[type=text] {
+	width:300px;
+        text-align: center;
+}
+
+/* Select */
+select.aweform {
+	width:auto;
+}
+
+/* Textarea */
+textarea.aweform {
+	width:80%;
+	height:150px;
+        text-align: center;
+}
+
+::-webkit-input-placeholder, input.aweform:-moz-placeholder {
+	color:#bbb;
+}
+
+/*****************
+    - Button -
+*****************/
+.form-submit {
+	clear:both; 
+	margin-left:160px;
+        
+}
+
+.form-submit:after {
+	content:"."; 
+	visibility:hidden;
+	display:block; 
+	clear:both; 
+	height:0; 
+	font-size:0;
+}
+
+button, input[type="submit"] {
+    margin: 5px 0px 0px 140px;
+	color:#fff;
+	cursor:pointer;
+	display:inline-block;
+	font:14px/18px "Helvetica Neue", Helvetica, Arial, Sans-Serif;
+	font-weight:bold;
+	border:none;	
+        padding:7px 15px;
+	text-align:center;
+	background-color:#7cb63a;
+	-webkit-border-radius:3px;
+	   -moz-border-radius:3px;
+			border-radius:3px;
+	-webkit-box-shadow:0px -1px 0px rgba(0,0,0,.08) inset;
+	   -moz-box-shadow:0px -1px 0px rgba(0,0,0,.08) inset;
+			box-shadow:0px -1px 0px rgba(0,0,0,.08) inset;
+	-webkit-transition:all .3s;
+	   -moz-transition:all .3s;
+			transition:all .3s;
+                        background: #4a89dc;
+}
+
+button:hover, button:focus, input[type="submit"]:hover, input[type="submit"]:focus {
+	background-color:#4a89dc;
+	text-decoration:none;
+}
+
+button[disabled], input[type="submit"][disabled] {
+	background-color:#bbb; 
+	color:#dfdfdf; 
+	cursor:not-allowed; 
+	-webkit-box-shadow:none; 
+	   -moz-box-shadow:none; 
+			box-shadow:none;
+}
+
+button > i {
+	color:#fff;
+    margin-right:4px;	
+}
+
+/********************
+    - Preloader -
+********************/
+.preloader {
+	display:inline-block;
+	vertical-align:middle;
+	padding-left:8px;	
+}
+
+/******************
+    - Captcha -
+******************/
+.captcha {
+	clear:both;
+	display:inline-block;
+	border:1px solid #ddd;
+	padding:10px;
+	background-color:#f6f6f6;
+	-webkit-border-radius:3px;
+	   -moz-border-radius:3px;
+			border-radius:3px;
+}
+
+.captcha img {
+	display:block;
+	float:left;
+}
+
+.captcha img.captcha-img {
+	border:1px solid #ccc;
+	-webkit-border-radius:3px;
+	   -moz-border-radius:3px;
+			border-radius:3px;
+}
+
+.captcha > i.change-captcha {
+	cursor:pointer;
+	margin-top:5px;
+	margin-left:10px;
+}
+
+input.captcha[type=text] {
+	width:200px !important;
+	margin-top:5px;
+}
+
+/************************
+    - Notifications -
+************************/
+.notification {
+	display:none;
+	position:relative;
+	clear:both; 
+	margin:0 auto 15px; 
+	width:100%;
+	padding:15px;
+	min-height:20px;
+	-webkit-border-radius:3px;
+	   -moz-border-radius:3px;
+			border-radius:3px;
+}
+
+.notification .inner {
+	clear:both;
+	display:block;
+	text-align:center;
+	font-size:16px;
+	line-height:24px;
+	color:#fff;
+}
+
+.notification ul {
+	margin-left:2em !important;
+}
+
+.notification p.error-message {
+	font-weight:bold;
+	margin-bottom:10px !important;
+}
+
+/* Notification close button */
+.notification .close {
+	position:absolute;
+	display:block;
+	right:15px;
+    top:50%;
+	margin-top:-5px;
+	width:9px;
+    height:9px;
+	opacity:0.7;
+	text-indent:-9000px;
+	background:url(../images/notification-close.png) no-repeat;
+	-webkit-transition:all .3s;
+	   -moz-transition:all .3s;
+			transition:all .3s;
+}
+
+.notification .close:hover {
+    opacity:1;
+}
+
+/* Success notification box */
+.notification.success {
+	background-color:#7cb63a;
+}
+
+/* Failure notification box */
+.notification.fail {
+	background-color:#ff675b;
+}
+
+/*********************
+    - Responsive -
+*********************/
+@media only screen and (min-width:0px) and (max-width:767px) {
+	form label {
+		clear:both;
+		width:100%;
+		margin-bottom:6px;	
+	}
+	
+	form .inputs {
+		clear:both;
+		width:100%;
+	}
+	
+	.form-submit {
+		margin:0;	
+	}
+}
+
+@media only screen and (min-width:480px) and (max-width:767px) {
+	.ajax-contact-form {
+		margin:30px auto;		
+	}
+	
+	.ajax-contact-form .form .title {
+		font-size:20px;
+		padding:15px;	
+	}
+	
+	form label {
+		font-size:13px;
+		line-height:18px;	
+	}
+}
+
+@media only screen and (min-width:0px) and (max-width:479px) {
+	.ajax-contact-form {
+		margin:15px auto;		
+	}
+	
+	.ajax-contact-form .form .title {
+		font-size:16px;
+		padding:10px;	
+	}
+	
+	form label {
+		font-size:12px;
+		line-height:16px;	
+	}
+	
+	input.aweform[type=text], select.aweform {
+		width:100%;	
+	}
+}
+
+.adjuntar{
+    background: #4a89dc;
+    color: #fff;
+    width: 350px;
+    border-radius: 50px;
+}
